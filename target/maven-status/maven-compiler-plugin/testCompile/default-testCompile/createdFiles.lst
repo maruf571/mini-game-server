@@ -1,0 +1,4 @@
+com/king/mgs/handler/LoginHandlerIT.class
+com/king/mgs/handler/ScoreHandlerIT.class
+com/king/mgs/service/SessionServiceImplTest.class
+com/king/mgs/service/UserScoreServiceTest.class
