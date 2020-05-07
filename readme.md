@@ -46,8 +46,3 @@ $ mvn clean test
 ```
 $ mvn clean verify
 ```
-
-## TODO
-
-- change the readme file extension to txt 
-- 
