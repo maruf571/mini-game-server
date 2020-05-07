@@ -1,6 +1,7 @@
-package com.king.mgs.service;
+package com.king.mgs.service.impl;
 
 import com.king.mgs.model.Session;
+import com.king.mgs.service.SessionService;
 
 
 import java.util.Map;

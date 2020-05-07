@@ -1,7 +1,7 @@
 package com.king.mgs.handler;
 
 import com.king.mgs.service.UserScoreService;
-import com.king.mgs.service.UserScoreServiceImpl;
+import com.king.mgs.service.impl.UserScoreServiceImpl;
 import com.sun.net.httpserver.HttpExchange;
 
 import java.util.logging.Logger;

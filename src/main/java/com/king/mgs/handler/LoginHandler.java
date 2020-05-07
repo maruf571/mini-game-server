@@ -1,7 +1,7 @@
 package com.king.mgs.handler;
 
 import com.king.mgs.model.Session;
-import com.king.mgs.service.SessionServiceImpl;
+import com.king.mgs.service.impl.SessionServiceImpl;
 import com.sun.net.httpserver.HttpExchange;
 
 import java.util.logging.Logger;

@@ -1,6 +1,8 @@
 package com.king.mgs.service;
 
 import com.king.mgs.model.Session;
+import com.king.mgs.service.impl.SessionServiceImpl;
+import com.king.mgs.service.impl.UserScoreServiceImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

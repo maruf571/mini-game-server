@@ -1,6 +1,7 @@
-package com.king.mgs.service;
+package com.king.mgs.service.impl;
 
 import com.king.mgs.model.UserScore;
+import com.king.mgs.service.UserScoreService;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

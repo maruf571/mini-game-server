@@ -1,6 +1,7 @@
 package com.king.mgs.service;
 
 import com.king.mgs.model.Session;
+import com.king.mgs.service.impl.SessionServiceImpl;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
