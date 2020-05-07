@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.king.mgs.service.UserScoreServiceTest" time="0.354" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.king.mgs.service.UserScoreServiceTest" time="0.398" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/maruf/Desktop/mini-game-server/target/surefire/surefirebooter7114440372919134459.jar /Users/maruf/Desktop/mini-game-server/target/surefire 2020-05-07T15-14-21_549-jvmRun1 surefire10807868528416072544tmp surefire_03205848424422042448tmp"/>
+    <property name="sun.java.command" value="/Users/maruf/Desktop/mini-game-server/target/surefire/surefirebooter11652969052083549741.jar /Users/maruf/Desktop/mini-game-server/target/surefire 2020-05-07T16-42-54_148-jvmRun1 surefire16385417199474724095tmp surefire_014593442302530014359tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/maruf/Desktop/mini-game-server/target/test-classes:/Users/maruf/Desktop/mini-game-server/target/classes:/Users/maruf/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.4.2/junit-jupiter-api-5.4.2.jar:/Users/maruf/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/maruf/.m2/repository/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar:/Users/maruf/.m2/repository/org/junit/platform/junit-platform-commons/1.4.2/junit-platform-commons-1.4.2.jar:/Users/maruf/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.4.2/junit-jupiter-engine-5.4.2.jar:/Users/maruf/.m2/repository/org/junit/platform/junit-platform-engine/1.4.2/junit-platform-engine-1.4.2.jar:/Users/maruf/.m2/repository/org/mockito/mockito-core/3.3.3/mockito-core-3.3.3.jar:/Users/maruf/.m2/repository/net/bytebuddy/byte-buddy/1.10.5/byte-buddy-1.10.5.jar:/Users/maruf/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.5/byte-buddy-agent-1.10.5.jar:/Users/maruf/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/Users/maruf/.m2/repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar:/Users/maruf/.m2/repository/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar:/Users/maruf/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/maruf/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar:"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/maruf/Desktop/mini-game-server/target/surefire/surefirebooter7114440372919134459.jar"/>
+    <property name="surefire.real.class.path" value="/Users/maruf/Desktop/mini-game-server/target/surefire/surefirebooter11652969052083549741.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="11.0.2+9"/>
@@ -61,9 +61,9 @@
     <property name="java.class.version" value="55.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="should_add_equal_values" classname="com.king.mgs.service.UserScoreServiceTest" time="0.099"/>
-  <testcase name="should_get_level_data" classname="com.king.mgs.service.UserScoreServiceTest" time="0.008"/>
-  <testcase name="should_return_only_15_scores" classname="com.king.mgs.service.UserScoreServiceTest" time="0.06"/>
-  <testcase name="should_override_score_on_level" classname="com.king.mgs.service.UserScoreServiceTest" time="0.033"/>
-  <testcase name="should_return_empty_string_on_empty_level" classname="com.king.mgs.service.UserScoreServiceTest" time="0.004"/>
+  <testcase name="should_add_equal_values" classname="com.king.mgs.service.UserScoreServiceTest" time="0.199"/>
+  <testcase name="should_get_level_data" classname="com.king.mgs.service.UserScoreServiceTest" time="0.009"/>
+  <testcase name="should_return_only_15_scores" classname="com.king.mgs.service.UserScoreServiceTest" time="0.043"/>
+  <testcase name="should_override_score_on_level" classname="com.king.mgs.service.UserScoreServiceTest" time="0.004"/>
+  <testcase name="should_return_empty_string_on_empty_level" classname="com.king.mgs.service.UserScoreServiceTest" time="0.005"/>
 </testsuite>
