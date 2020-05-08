@@ -13,6 +13,7 @@
     </properties>
 
     <dependencies>
+        <!-- Test dependency for unit test -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -25,12 +26,13 @@
             <version>5.4.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>3.3.3</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
+        <!-- Test dependency for aoi test -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
@@ -93,7 +95,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.king.mgs.Application</mainClass>
+                    <mainClass>com.marufh.mgs.Application</mainClass>
                 </configuration>
             </plugin>
 
@@ -106,7 +108,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.king.mgs.Application</mainClass>
+                            <mainClass>com.marufh.mgs.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

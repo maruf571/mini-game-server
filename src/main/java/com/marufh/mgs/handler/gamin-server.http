@@ -1,0 +1,12 @@
+GET http://localhost:8000/100/login
+###
+
+POST http://localhost:8000/3/score?sessionkey=FMLRGQXDYR
+
+500
+
+###
+
+GET http://localhost:8000/3/highscorelist
+
+###
