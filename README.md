@@ -15,10 +15,10 @@ uses RequestRouter to route the request to the proper handler.
 - Use Singleton pattern for services 
  
 ## Modules/Class Introduction
-handler: package related to handle request and response data.
-model: package related to data model 
-service: package where all the business logic sstay
-MiniGameServer: http server create from this file 
+- handler: package related to handle request and response data.
+- model: package related to data model 
+- service: package where all the business logic sstay
+- MiniGameServer: http server create from this file 
 Application: Application start from this class
 
 
