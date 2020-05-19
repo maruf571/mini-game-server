@@ -5,13 +5,14 @@ import com.marufh.mgs.service.UserScoreService;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListSet;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class UserScoreServiceImpl implements UserScoreService {
 
     private static final Logger log = Logger.getLogger(UserScoreServiceImpl.class.getName());
-    private static final Map<Integer, SortedSet<UserScore>> levelMap = new ConcurrentHashMap<>();
+    private static final Map<Integer, NavigableSet<UserScore>> levelMap = new ConcurrentHashMap<>();
     private static final int NUMBER_OF_SCORE = 15;
     private static UserScoreServiceImpl instance;
 
@@ -44,7 +45,7 @@ public class UserScoreServiceImpl implements UserScoreService {
     @Override
     public  String getHighScore(int level) {
         return Optional.ofNullable(levelMap.get(level))
-                .orElse(Collections.emptySortedSet())
+                .orElse(Collections.emptyNavigableSet())
                 .stream()
                 .map(us -> String.format("%s=%s", us.getUserId(), us.getScore())
                 ).collect(Collectors.joining(","));
@@ -68,11 +69,10 @@ public class UserScoreServiceImpl implements UserScoreService {
     }
 
     private void createNewLevelMap(UserScore userScore, int level) {
-        SortedSet<UserScore> userScoreSortedSet = Collections.synchronizedSortedSet(
-                new TreeSet<>(Comparator.comparing(UserScore::getScore)
-                        .thenComparing(UserScore::getUserId))
-                        .descendingSet()
-        );
+        NavigableSet<UserScore> userScoreSortedSet = new ConcurrentSkipListSet<UserScore>(
+                Comparator.comparing(UserScore::getScore)
+                .thenComparing(UserScore::getUserId)
+        ).descendingSet();
         userScoreSortedSet.add(userScore);
         levelMap.put(level, userScoreSortedSet);
     }

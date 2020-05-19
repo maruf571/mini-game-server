@@ -18,14 +18,10 @@ public class HighScoreHandler extends BaseRequestHandler {
     }
 
     @Override
-    void handleGet(HttpExchange httpExchange) {
+    public void handleGet(HttpExchange httpExchange) {
         int level = getPathVariable(httpExchange, pattern, 1);
         String scores = scoreService.getHighScore(level);
         sendRespond(httpExchange, HttpStatus.OK.code, scores);
     }
 
-    @Override
-    void handlePost(HttpExchange httpExchange) {
-        sendRespond(httpExchange, HttpStatus.METHOD_NOT_ALLOWED.code, HttpStatus.METHOD_NOT_ALLOWED.message);
-    }
 }

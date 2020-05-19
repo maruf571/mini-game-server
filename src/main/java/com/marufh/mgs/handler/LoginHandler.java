@@ -19,15 +19,10 @@ public class LoginHandler extends BaseRequestHandler {
     }
 
     @Override
-    void handleGet(HttpExchange httpExchange) {
+    public void handleGet(HttpExchange httpExchange) {
         log.info("handling login request");
         int userId = getPathVariable(httpExchange, pattern, 1);
         Session session = sessionServiceImpl.create(userId);
         sendRespond(httpExchange, HttpStatus.OK.code, session.getSessionId());
-    }
-
-    @Override
-    void handlePost(HttpExchange httpExchange) {
-        sendRespond(httpExchange, HttpStatus.METHOD_NOT_ALLOWED.code, HttpStatus.METHOD_NOT_ALLOWED.message);
     }
 }

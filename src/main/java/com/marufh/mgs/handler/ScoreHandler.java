@@ -22,13 +22,9 @@ public class ScoreHandler extends BaseRequestHandler {
         this.sessionService = SessionServiceImpl.getInstance();
     }
 
-    @Override
-    void handleGet(HttpExchange httpExchange) {
-        sendRespond(httpExchange, HttpStatus.METHOD_NOT_ALLOWED.code, HttpStatus.METHOD_NOT_ALLOWED.message);
-    }
 
     @Override
-    void handlePost(HttpExchange httpExchange) {
+    public void handlePost(HttpExchange httpExchange) {
         log.info("handling score request");
         int level = getPathVariable(httpExchange, pattern, 1);
         String sessionKey =  getQueryMap(httpExchange.getRequestURI().getQuery()).get("sessionkey");

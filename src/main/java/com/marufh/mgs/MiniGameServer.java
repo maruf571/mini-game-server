@@ -34,18 +34,26 @@ public class MiniGameServer implements Runnable {
     }
 
     public void start() {
-        log.info("starting the server...");
         if (null == thread) {
+            log.info("starting the server...");
+            executorService = Executors.newFixedThreadPool(20);
             this.thread = new Thread(this);
             this.thread.start();
+        } else {
+            log.warning("server is already running");
         }
+
     }
 
     public void stop() {
-        log.info("shutting down the server...");
-        server.stop(1);
-        executorService.shutdown();
-        executorService = null;
+        if(null != thread) {
+            log.info("shutting down the server...");
+            server.stop(1);
+            executorService.shutdown();
+            executorService = null;
+        } else {
+            log.warning("server is not running");
+        }
     }
 
 

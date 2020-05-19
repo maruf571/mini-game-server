@@ -56,7 +56,15 @@ public abstract class BaseRequestHandler {
     }
 
 
-    abstract void handleGet(HttpExchange httpExchange);
+    protected void handlePost(HttpExchange httpExchange) {
+        sendRespond(httpExchange, HttpStatus.METHOD_NOT_ALLOWED.code, HttpStatus.METHOD_NOT_ALLOWED.message);
+    }
 
-    abstract void handlePost(HttpExchange httpExchange);
+
+    protected void handleGet(HttpExchange httpExchange) {
+        sendRespond(httpExchange, HttpStatus.METHOD_NOT_ALLOWED.code, HttpStatus.METHOD_NOT_ALLOWED.message);
+    }
+
+
+
 }
